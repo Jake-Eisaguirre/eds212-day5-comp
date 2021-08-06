@@ -1,0 +1,32 @@
+---
+title: "Untitled"
+author: "Jake Eisaguirre"
+date: "8/6/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+- `include` : show or hide everything
+- `echo` : show or hide code
+
+## Taking a look at `starwars`
+```{r}
+
+#Data summary of starwars
+skimr::skim(starwars)
+summary(starwars)
+View(starwars)
+
+```
+
+```{r}
+#aes used for mapping against a variable
+
+ggplot(data = starwars, aes(x = height, y = mass)) +
+  geom_point(color = 'purple')
+
+```
+
